@@ -40,7 +40,7 @@ function result=phase_separation(img, inverted, half_yes, method_name)
     min_value=min(img(:));
     img = imadjust(img, [min_value/255 max_value/255], [0.0 1.0]);
 
-    img=not(adaptivethreshold(img,floor(size(img,1)/12), 0.0, 0));
+    img=not(adaptivethreshold(img,floor(size(img,1)/6), 0.0, 0));
        
     %rimozione buchi
     [N, M] = size(img);
